@@ -8,28 +8,14 @@ class App extends React.Component {
     alert("you clicked the title");
   }
   render() {
-    return React.createElement("div", {}, [
-      React.createElement(
-        "h1",
-        { onClick: this.handleTitleClick }, //this refer to the particular App,instance
-        "Adopt Me!"
-      ),
-      React.createElement(Pet, {
-        name: "Luna",
-        animal: "dog",
-        breed: "havanese"
-      }),
-      React.createElement(Pet, {
-  :      name: "Pepper",
-        animal: "bird",
-        breed: "Cockatiel"
-      }),
-      React.createElement(Pet, {
-        name: "Doink",
-        animal: "cat",
-        breed: "Mixed"
-      })
-    ]);
+    return (
+      <React.Fragment>
+        <h1>Adopt Me!</h1>
+        <Pet name="Luna" animal="dog" breed="Havanese" />
+        <Pet name="Pepper" animal="bird" breed="Cockatiel" />
+        <Pet name="Doink" animal="cat" breed="Mixed" />
+      </React.Fragment>
+    );
   }
 }
 
