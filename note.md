@@ -2,6 +2,14 @@ https://btholt.github.io/complete-intro-to-react-v4/
 
 ## Pure React
 
+创建 app class 的实例挂载到 root 上
+或者直接写标签
+
+```
+render(React.createElement(App), document.getElementById("root"));
+render(<App />, document.getElementById("root"));
+```
+
 ### class vs function component
 
 ### pass components props
@@ -91,3 +99,11 @@ return React.createElement("div", { id: "my-id" }, [
 ### passing components data with props
 
 1. don't like vue do not need to declare props in component just read props from this.props
+
+## routing
+
+### reach/router
+
+1. react tools $r consolelog the highlight router. we can use$r.setState to set state
+2. score system
+3. <Link>
