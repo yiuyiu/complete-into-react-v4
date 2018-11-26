@@ -39,6 +39,8 @@ https://btholt.github.io/complete-intro-to-react-v4/
 
 ### parcel
 
+1. parcel can check the .env file and read them as process.env
+
 ## JSX
 
 1. jsx will translate into 'render function', it just a shortcut make code more readable
@@ -60,3 +62,32 @@ return React.createElement("div", { id: "my-id" }, [
 4. composed component in jsx must begin with uppercase.s
 5. you have to push closing slash in jsx
 6. return multiple top level tags with 'React.Fragment' tag;in jsx2 can use "<></>" shorthand of 'React.Fragment'
+
+## rendering data
+
+### state and life cycle
+
+1. componentDidMount once the component is rendered into the dom. the component is visible now and then call
+   componentDidMout. it's by far the most useful
+2. state can change while props is immutable.props come from parent to child,while state stay in same level.
+3. 'one way data flow' the data only from parent to child
+4. super(props) React.component we have to do use super otherwise react can't track props
+5. use setState to tell react need to re-render
+6. visilize the state
+
+```html
+<pre>
+    <code>{JSON.stringify(this.state, null, 4)}</code>
+</pre>
+```
+
+### key prop
+
+1. how react renders
+   when react render an array. when order changes react does't know how things changed,it doesn't know index change,it just re-render.
+2. key exist (unique)
+   react check the key and know if the key same,it neec not to destroy that dom and just move the dom to the right position
+
+### passing components data with props
+
+1. don't like vue do not need to declare props in component just read props from this.props
