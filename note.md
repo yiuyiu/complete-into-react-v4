@@ -44,6 +44,8 @@ render(<App />, document.getElementById("root"));
 11. eslint-plugin-jsx-ally check for accessiblity
 12. eslint-plugin-react
 13. eslintrc.json extends order is quite essential.prettier should be in the end so that it can disable something you don't want to check
+14. parser:babel-eslint before eslint lint code it should use babel-eslint parser first.
+15. in code if we want to ignore some check we can use 'eslint-disable-next-line';
 
 ### parcel
 
@@ -106,4 +108,16 @@ return React.createElement("div", { id: "my-id" }, [
 
 1. react tools $r consolelog the highlight router. we can use$r.setState to set state
 2. score system
-3. <Link>
+
+## babel
+
+1. babel-eslint
+2. babel-core babel-preset-env
+3. babel-plugin-transform-class-properties
+4. babel-preset-react
+
+## async ui
+
+1. use top level state instead of constructor in now echo
+2. getDerivedStateFromProps
+3. static method and interior this

@@ -1,0 +1,14 @@
+{
+  "presets": [
+    "react",
+    [
+      "env",
+      {
+        "targets": {
+          "broswers": ["last 2 versions"]
+        }
+      }
+    ]
+  ],
+  "plugins": ["transform-class-properties"]
+}
