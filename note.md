@@ -128,3 +128,12 @@ return React.createElement("div", { id: "my-id" }, [
 1. when type in input,react catch it and know must re-render,and it will re-render the entire app.
 2. two way data binding is not free in react
 3. react bind **one event** lisner at the root element. when events bubble to this,react know to got to re-render.
+
+## context
+
+1. when a lot of props do not use spread operator {...} ,it make the component not explicit which prop it get.
+2. context is universal data for your app. if you set in componentA you can access it wherever underneth the componentA.
+3. createContext provide provider component and consumer component.
+   provider like entrance of the data,and consumer like the exit of the data.
+4. pattern in react called function as a child;function return markup is technically a component;
+5. if you need to use context in lifecycle or methods you need wrap the current component and use props to transfer context
