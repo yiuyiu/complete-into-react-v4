@@ -46,8 +46,9 @@ render(<App />, document.getElementById("root"));
 13. eslintrc.json extends order is quite essential.prettier should be in the end so that it can disable something you don't want to check
 14. parser:babel-eslint before eslint lint code it should use babel-eslint parser first.
 15. in code if we want to ignore some check we can use 'eslint-disable-next-line';
+16. in rules turn off or turn on the rule or set it to warning or error.
 
-### parcel
+### parcelet
 
 1. parcel can check the .env file and read them as process.env
 
@@ -82,7 +83,7 @@ return React.createElement("div", { id: "my-id" }, [
 2. state can change while props is immutable.props come from parent to child,while state stay in same level.
 3. 'one way data flow' the data only from parent to child
 4. super(props) React.component we have to do use super otherwise react can't track props
-5. use setState to tell react need to re-render
+5. use setState to tell react need to re-render;add callback function you guareentee that the function will call after the setState
 6. visilize the state
 
 ```html
@@ -121,3 +122,9 @@ return React.createElement("div", { id: "my-id" }, [
 1. use top level state instead of constructor in now echo
 2. getDerivedStateFromProps
 3. static method and interior this
+
+## form
+
+1. when type in input,react catch it and know must re-render,and it will re-render the entire app.
+2. two way data binding is not free in react
+3. react bind **one event** lisner at the root element. when events bubble to this,react know to got to re-render.

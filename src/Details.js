@@ -35,7 +35,7 @@ class Details extends React.Component {
           loading: false
         });
       })
-      .catch(err => {
+      .catch(() => {
         navigate("/");
       });
   }
