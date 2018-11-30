@@ -84,7 +84,7 @@ return React.createElement("div", { id: "my-id" }, [
 3. 'one way data flow' the data only from parent to child
 4. super(props) React.component we have to do use super otherwise react can't track props
 5. use setState to tell react need to re-render;add callback function you guareentee that the function will call after the setState
-6. visilize the state
+6. shouldComponentUpdate can do performance op.
 
 ```html
 <pre>
@@ -142,3 +142,12 @@ return React.createElement("div", { id: "my-id" }, [
 
 1. key and children are exceptions for passing to props;key like list's key;children children components,self closing tag has no children
 2. event bubbling,despite modal and react root do not wrap each other;the detail component can catch the event;
+
+## ref
+
+1. ref some sort of dom element
+2. ```javascript
+   <h1 ref={el => (this.myH1 = el)}>{name}</h1>
+   ```
+
+3. it will calling on the first render past. so the first time in render function,it will be undefined.and the second time it will has value.

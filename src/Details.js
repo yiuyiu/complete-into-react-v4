@@ -13,6 +13,9 @@ class Details extends React.Component {
     showModal: true
   };
   toggleModal = () => this.setState({ showModal: !this.state.showModal });
+  shouldComponentUpdate() {
+    return false;
+  }
   componentDidMount() {
     petfinder.pet
       .get({
@@ -36,6 +39,7 @@ class Details extends React.Component {
           breed,
           loading: false
         });
+        console.log(this.state);
       })
       .catch(() => {
         navigate("/");
@@ -55,11 +59,12 @@ class Details extends React.Component {
       media,
       showModal
     } = this.state;
+    console.log(this.myH1);
     return (
       <div className="details">
         <Carousel media={media} />
         <div onClick={console.log}>
-          <h1>{name}</h1>
+          <h1 ref={el => (this.myH1 = el)}>{name}</h1>
           <h2>
             {animal}-{breed}-{location}
           </h2>
