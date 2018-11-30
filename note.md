@@ -137,3 +137,8 @@ return React.createElement("div", { id: "my-id" }, [
    provider like entrance of the data,and consumer like the exit of the data.
 4. pattern in react called function as a child;function return markup is technically a component;
 5. if you need to use context in lifecycle or methods you need wrap the current component and use props to transfer context
+
+## portal
+
+1. key and children are exceptions for passing to props;key like list's key;children children components,self closing tag has no children
+2. event bubbling,despite modal and react root do not wrap each other;the detail component can catch the event;
