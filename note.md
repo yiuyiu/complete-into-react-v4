@@ -151,3 +151,21 @@ return React.createElement("div", { id: "my-id" }, [
    ```
 
 3. it will calling on the first render past. so the first time in render function,it will be undefined.and the second time it will has value.
+
+## test
+
+1. react-test-rendered cause broswer render is always slow.
+2. eslint env.jest true
+3. snapshot test
+   1. snapshot can update when run test again with arguments;
+   2. This looked like this before and I expect this to continue looking like this until I don't and then I will update it
+   3. low confidence test
+   4. API response would be a perfect thing to write a snapshot test for
+   5. should check the `__snapshot__` generated files
+4. jest --watch
+5. jest --coverage
+6. Enzyme test framework
+7. which to test(atypically)
+   1. test modules that will live on for a long time e.g. API
+   2. essential core code
+   3. bug fixed
