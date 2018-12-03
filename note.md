@@ -107,7 +107,7 @@ return React.createElement("div", { id: "my-id" }, [
 
 ### reach/router
 
-1. react tools $r consolelog the highlight router. we can use$r.setState to set state
+1. react tools $r consol elog the highlight router. we can use$r.setState to set state
 2. score system
 
 ## babel
@@ -169,6 +169,7 @@ return React.createElement("div", { id: "my-id" }, [
    1. test modules that will live on for a long time e.g. API
    2. essential core code
    3. bug fixed
+   4. test some modules when someone change it they can get the warning that you can't change it because someone depend it.
 
 ## css in js
 
@@ -186,3 +187,16 @@ defer loading other source laterly
 4. it recommended initial payload should be no more than 50kb
 5. load modal html
 6. preload prefetch `<script rel='prefetch'>`
+7. service worker at the background
+
+## redux
+
+redux redux-thunk react-redux
+
+1. make predictable how your data flow and testable how your data mutate
+2. central data store for your repo
+3. reducer: take state,action state is the previous state,and return new state;pure function has no side affects(super easily be tested)
+4. combineReducers is a helper that keeps everything in order and make writing reducers less complex;
+5. flux-standard-action
+6. action creators and actions;action creators take in some sort of data and return well formed object. it suit to test with snapshot test.
+7. thunk:value would be determined in run-time. async data fetching with redux

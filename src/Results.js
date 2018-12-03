@@ -2,7 +2,7 @@ import React from "react";
 import Pet from "./Pet";
 import pf from "petfinder-client";
 import SearchBox from "./SearchBox";
-import { Consumer } from "./SearchContext";
+import { connect } from "react-redux";
 const petfinder = pf({
   key: process.env.API_KEY,
   secret: process.env.API_SECRET
@@ -22,10 +22,10 @@ class Results extends React.Component {
   search = () => {
     petfinder.pet
       .find({
-        animal: this.props.searchParams.animal,
+        animal: this.props.animal,
         output: "full",
-        location: this.props.searchParams.location,
-        breed: this.props.searchParams.breed
+        location: this.props.location,
+        breed: this.props.breed
       })
       .then(data => {
         let pets;
@@ -71,10 +71,12 @@ class Results extends React.Component {
     );
   }
 }
-export default function ResultsWithContext(props) {
-  return (
-    <Consumer>
-      {context => <Results {...props} searchParams={context} />}
-    </Consumer>
-  );
-}
+// connect function grab data outof the store
+const mapStateToProps = ({ location, breed, animal }) => ({
+  location,
+  animal,
+  breed
+});
+// inject the location as prop into resultsWi thContext
+
+export default connect(mapStateToProps)(Results);
