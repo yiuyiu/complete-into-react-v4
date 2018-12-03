@@ -175,3 +175,14 @@ return React.createElement("div", { id: "my-id" }, [
 emotion,react-emotion(@emotion/core,@emotion/styled)
 
 javascript templates into css
+
+## code spliting
+
+defer loading other source laterly
+
+1. parcel import()
+2. react-loadable the component you can use to show the component you want to load.as well can capture the loading results.
+3. code spliting by route
+4. it recommended initial payload should be no more than 50kb
+5. load modal html
+6. preload prefetch `<script rel='prefetch'>`
